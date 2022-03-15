@@ -20,39 +20,63 @@ function buildURL() {
 function Home() {
     const apiURL = buildURL();
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
-    const getData = async () => {
-        setLoading(true);
-        const response = await fetch(apiURL, {
-            method: 'GET',
-            headers: {
-                'x-rapidapi-host': '',
-                'x-rapidapi-key': '',
-            },
-        });
-        const dt = await response.json();
-        console.log(dt);
-        setData(dt);
-        setLoading(false);
-    };
-    useEffect(() => {
-        getData();
-    }, []);
+    // const getData = async () => {
+    //     setLoading(true);
+    //     const response = await fetch(apiURL, {
+    //         method: 'GET',
+    //         headers: {
+    //             'x-rapidapi-host': '',
+    //             'x-rapidapi-key': '',
+    //         },
+    //     });
+    //     const dt = await response.json();
+    //     console.log(dt);
+    //     setData(dt);
+    //     setLoading(false);
+    // };
+    // useEffect(() => {
+    //     getData();
+    // }, []);
 
     return (
         <div className="container px-2">
             {loading ? (
                 <div>Loading...</div>
             ) : (
-                <div className="row">
-                    {data?.response.map((match) => (
-                        <div className="col-6 col-md-4" key={match.fixture.id}>
+                <div className="row px-2 py-2">
+                    {/* {data?.response.map((match) => (
+                        <div className="col-6 col-md-4 match-card" key={match.fixture.id}>
                             <p>{match.teams.home.name}</p>
                             <p>vs</p>
                             <p>{match.teams.away.name}</p>
                         </div>
-                    ))}
+                    ))} */}
+                    <div className="col-6 col-md-4 px-2">
+                        <div className="match-card">
+                            <div className="row">
+                                <div className="col-6 text-center">
+                                    <img class="w-75 mt-4 mb-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                </div>
+                                <div className="col-6 text-center">
+                                    <img class="w-75 mt-4 mb-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-6 col-md-4 px-2">
+                        <div className="match-card">
+                            <div className="row">
+                                <div className="col-6 text-center">
+                                    <img class="w-75 mt-4 mb-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                </div>
+                                <div className="col-6 text-center">
+                                    <img class="w-75 mt-4 mb-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             )}
         </div>
