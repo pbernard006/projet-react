@@ -1,5 +1,5 @@
 .title {
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
   font-size: 40px;
 }
 .white {
@@ -13,7 +13,7 @@
 .btn-secondary {
   background-color: #413d3d;
   color: #e2e2e2;
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
   border-radius: 10px;
 }
 
@@ -24,5 +24,6 @@
 .match-card {
   background-image: url(../images/pitch.jpg);
   background-size: cover;
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  border: solid #413d3d 0.1px;
 }
