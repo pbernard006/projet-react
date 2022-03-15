@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import calendar from '../data/calendar.json';
 import '../styles/styles.css';
 
@@ -43,7 +44,11 @@ function Home() {
     return (
         <div className="container px-2">
             {loading ? (
-                <div>Loading...</div>
+                <div className=" mt-5 d-flex justify-content-center ">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
             ) : (
                 <div className="row px-2 py-2">
                     {/* {data?.response.map((match) => (
@@ -54,20 +59,22 @@ function Home() {
                         </div>
                     ))} */}
                     <div className="col-6 col-md-4 px-2 py-2">
-                        <div className="match-card">
-                            <div className="row">
-                                <div className="col-6 text-center">
-                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
-                                    <br />
-                                    <span className="mb-4 fs-3 text-light">Lorient</span>
-                                </div>
-                                <div className="col-6 text-center">
-                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
-                                    <br />
-                                    <span className="mb-4 fs-3 text-light">Lyon</span>
+                        <Link className="link" to={`/match/718614`}>
+                            <div className="match-card">
+                                <div className="row">
+                                    <div className="col-6 text-center">
+                                        <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                        <br />
+                                        <span className="mb-4 fs-3 text-light">Lorient</span>
+                                    </div>
+                                    <div className="col-6 text-center">
+                                        <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                        <br />
+                                        <span className="mb-4 fs-3 text-light">Lyon</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                     <div className="col-6 col-md-4 px-2 py-2">
                         <div className="match-card">

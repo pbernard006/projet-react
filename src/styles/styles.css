@@ -27,3 +27,11 @@
     font-family: 'ZCOOL QingKe HuangYou', cursive;
     border: solid #413d3d 0.1px;
 }
+
+.match-card:hover {
+    opacity: 0.5;
+}
+
+.link {
+    text-decoration: none;
+}
