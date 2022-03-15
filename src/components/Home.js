@@ -53,26 +53,66 @@ function Home() {
                             <p>{match.teams.away.name}</p>
                         </div>
                     ))} */}
-                    <div className="col-6 col-md-4 px-2">
+                    <div className="col-6 col-md-4 px-2 py-2">
                         <div className="match-card">
                             <div className="row">
                                 <div className="col-6 text-center">
-                                    <img class="w-75 mt-4 mb-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                    <br />
+                                    <span className="mb-4 fs-3 text-light">Lorient</span>
                                 </div>
                                 <div className="col-6 text-center">
-                                    <img class="w-75 mt-4 mb-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                    <br />
+                                    <span className="mb-4 fs-3 text-light">Lyon</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-6 col-md-4 px-2">
+                    <div className="col-6 col-md-4 px-2 py-2">
                         <div className="match-card">
                             <div className="row">
                                 <div className="col-6 text-center">
-                                    <img class="w-75 mt-4 mb-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                    <br />
+                                    <span className="mb-4 fs-3 text-light">Lorient</span>
                                 </div>
                                 <div className="col-6 text-center">
-                                    <img class="w-75 mt-4 mb-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                    <br />
+                                    <span className="mb-4 fs-3 text-light">Lyon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-6 col-md-4 px-2 py-2">
+                        <div className="match-card">
+                            <div className="row">
+                                <div className="col-6 text-center">
+                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                    <br />
+                                    <span className="mb-4 fs-3 text-light">Lorient</span>
+                                </div>
+                                <div className="col-6 text-center">
+                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                    <br />
+                                    <span className="mb-4 fs-3 text-light">Lyon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-6 col-md-4 px-2 py-2">
+                        <div className="match-card">
+                            <div className="row">
+                                <div className="col-6 text-center">
+                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                    <br />
+                                    <span className="mb-4 fs-3 text-light">Lorient</span>
+                                </div>
+                                <div className="col-6 text-center">
+                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                    <br />
+                                    <span className="mb-4 fs-3 text-light">Lyon</span>
                                 </div>
                             </div>
                         </div>
