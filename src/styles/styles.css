@@ -32,6 +32,28 @@
     opacity: 0.5;
 }
 
+.bg-match {
+    background-image: url(../images/pitch.jpg);
+    background-size: cover;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    background-position: 50% 80%;
+}
+
 .link {
     text-decoration: none;
+}
+
+.score {
+    background-color: #979797;
+    border-radius: 10px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.statistiques {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+.line-up {
+    background-image: url(../images/line-up.jpg);
 }
