@@ -38,21 +38,6 @@ function Match() {
           </div>
         </div>
       ) : (
-        // Score
-        // <div className="match-card">
-        //     <div className="row">
-        //         <div className="col-6 text-center">
-        //             <span className="text-light">{data?.teams.home.name}</span>
-        //             <br />
-        //             <span className="text-light">{data?.goals.home}</span>
-        //         </div>
-        //         <div className="col-6 text-center">
-        //             <span className="text-light">{data?.teams.away.name}</span>
-        //             <br />
-        //             <span className="text-light">{data?.goals.away}</span>
-        //         </div>
-        //     </div>
-        // </div>
         <div>
           <Score data={data} />
           <div className="container">
