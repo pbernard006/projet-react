@@ -1,4 +1,9 @@
+import { useState } from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 function Score({ data }) {
+  const [heart, fillHeart] = useState(false);
+
   console.log({ data });
   return (
     <div className="container-fluid bg-match pt-5rem">

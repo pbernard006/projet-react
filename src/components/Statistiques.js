@@ -3,7 +3,6 @@ function Statistiques({ data }) {
     return (
       <div className="row text-center statistiques mt-1">
         <span className="fw-bold mb-3">Stade : {data?.fixture.venue.name}</span>
-
         <span>Les statistiques du match ne sont pas encore disponibles</span>
       </div>
     );
