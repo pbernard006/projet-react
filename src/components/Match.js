@@ -56,7 +56,7 @@ function Match() {
         <div>
           <Score data={data} />
           <div className="container">
-            <Statistiques />
+            <Statistiques data={data} />
             <Lineup />
           </div>
         </div>
