@@ -14,10 +14,18 @@ function Lineup({ data }) {
     setAway(true);
   }
 
+  if (data?.fixture.status.short === "NS") {
+    return (
+      <div className="row text-center statistiques mt-1">
+        <span>Les compositions ne sont pas encore disponibles</span>
+      </div>
+    );
+  }
+
   return (
     <div className="mt-4">
       <div className="row mb-2">
-        <div className="radio col-2" onClick={clickOnHome}>
+        <div className="radio col-5" onClick={clickOnHome}>
           <span
             className={`${
               home ? "btn-secondary-selected" : "btn-secondary-not-selected"
@@ -26,7 +34,7 @@ function Lineup({ data }) {
             {data?.teams.home.name}
           </span>
         </div>
-        <div className="radio col-2" onClick={clickOnAway}>
+        <div className="radio col-5" onClick={clickOnAway}>
           <span
             className={`${
               away ? "btn-secondary-selected" : "btn-secondary-not-selected"
@@ -40,7 +48,7 @@ function Lineup({ data }) {
       {home && (
         <>
           <span className="lineup-informations">
-            Formation : {data.lineups[0].formation} / Entraineur :{" "}
+            Formation : {data.lineups[0].formation} / Entraineur :
             {data.lineups[0].coach.name}
           </span>
           <div className="lineup py-5">
@@ -116,7 +124,7 @@ function Lineup({ data }) {
       {away && (
         <>
           <span className="lineup-informations">
-            Formation : {data.lineups[1].formation} / Entraineur :{" "}
+            Formation : {data.lineups[1].formation} / Entraineur :
             {data.lineups[1].coach.name}
           </span>
           <div className="lineup py-5">
