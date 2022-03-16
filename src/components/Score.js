@@ -1,12 +1,18 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { favoritesSlice } from "../slices";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-function Score({ data }) {
+function Score({ data, id }) {
   const [favorite, setFavorite] = useState(false);
+  console.log(data.fixture.id);
 
-  function clickOnSetFavorite() {
+  const dispatch = useDispatch();
+  const addToFavorite = (event) => {
     setFavorite(!favorite);
-  }
+    event.preventDefault();
+    dispatch(favoritesSlice.actions.toggle({ id }));
+  };
 
   console.log({ data });
   return (
@@ -16,7 +22,7 @@ function Score({ data }) {
           <div className="text-end">
             <i
               className={`${favorite ? "fas" : "far"} fa-heart fs-2 mt-2 red`}
-              onClick={clickOnSetFavorite}
+              onClick={addToFavorite}
             ></i>
           </div>
         </div>
