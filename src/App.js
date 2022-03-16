@@ -23,6 +23,7 @@ import {
 import storage from "redux-persist/lib/storage";
 
 import { favoritesSlice } from "./slices";
+import Favorites from "./components/Favorites";
 
 const persistConfig = {
   key: "root",
@@ -58,6 +59,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/match/:id" element={<Match />} />
+              <Route path="/favoris" element={<Favorites />} />
             </Routes>
           </BrowserRouter>
         </PersistGate>
