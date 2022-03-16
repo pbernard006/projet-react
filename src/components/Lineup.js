@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Lineup() {
+function Lineup({ data }) {
   const [home, setHome] = useState(true);
   const [away, setAway] = useState(false);
 
