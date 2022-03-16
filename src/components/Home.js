@@ -5,6 +5,7 @@ import "../styles/styles.css";
 
 function getIndexOfMatchweek() {
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
   var index = 0;
   // On démarre la boucle à 1 car on souhaite accéder à i - 1
   for (var i = 1; i < calendar.matchweek.length; i++) {

@@ -23,7 +23,7 @@ function Lineup({ data }) {
               home ? "btn-secondary-selected" : "btn-secondary-not-selected"
             } btn-secondary fs-6 px-1 py-1`}
           >
-            Domicile
+            {data?.teams.home.name}
           </span>
         </div>
         <div className="radio col-2" onClick={clickOnAway}>
@@ -32,7 +32,7 @@ function Lineup({ data }) {
               away ? "btn-secondary-selected" : "btn-secondary-not-selected"
             } btn-secondary fs-6 px-1 py-1`}
           >
-            Exterieur
+            {data?.teams.away.name}
           </span>
         </div>
       </div>
@@ -40,51 +40,74 @@ function Lineup({ data }) {
       {home && (
         <>
           <span className="lineup-informations">
-            Formation : 4-2-3-1 / Entraineur : H.Barsacq
+            Formation : {data.lineups[0].formation} / Entraineur :{" "}
+            {data.lineups[0].coach.name}
           </span>
           <div className="lineup py-5">
             <div className="text-center row">
               <div className="col-4">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[0].startXI[10].player.name}
+                </span>
               </div>
               <div className="col-4">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[0].startXI[9].player.name}
+                </span>
               </div>
               <div className="col-4">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[0].startXI[8].player.name}
+                </span>
               </div>
               <br />
               <br />
               <br />
               <div className="col-6">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[0].startXI[7].player.name}
+                </span>
               </div>
               <div className="col-6">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[0].startXI[6].player.name}
+                </span>
               </div>
               <br />
               <div className="col-12">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[0].startXI[5].player.name}
+                </span>
               </div>
               <br />
               <br />
               <br />
               <div className="col-3">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[0].startXI[4].player.name}
+                </span>
               </div>
               <div className="col-3">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[0].startXI[3].player.name}
+                </span>
               </div>
               <div className="col-3">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[0].startXI[2].player.name}
+                </span>
               </div>
               <div className="col-3">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[0].startXI[1].player.name}
+                </span>
               </div>
               <br />
               <br />
               <div className="col-12">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[0].startXI[0].player.name}
+                </span>
               </div>
             </div>
           </div>
@@ -93,51 +116,74 @@ function Lineup({ data }) {
       {away && (
         <>
           <span className="lineup-informations">
-            Formation : 4-2-3-1 / Entraineur : Zizou
+            Formation : {data.lineups[1].formation} / Entraineur :{" "}
+            {data.lineups[1].coach.name}
           </span>
           <div className="lineup py-5">
             <div className="text-center row">
               <div className="col-4">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[1].startXI[10].player.name}
+                </span>
               </div>
               <div className="col-4">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[1].startXI[9].player.name}
+                </span>
               </div>
               <div className="col-4">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[1].startXI[8].player.name}
+                </span>
               </div>
               <br />
               <br />
               <br />
               <div className="col-6">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[1].startXI[7].player.name}
+                </span>
               </div>
               <div className="col-6">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[1].startXI[6].player.name}
+                </span>
               </div>
               <br />
               <div className="col-12">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[1].startXI[5].player.name}
+                </span>
               </div>
               <br />
               <br />
               <br />
               <div className="col-3">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[1].startXI[4].player.name}
+                </span>
               </div>
               <div className="col-3">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[1].startXI[3].player.name}
+                </span>
               </div>
               <div className="col-3">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[1].startXI[2].player.name}
+                </span>
               </div>
               <div className="col-3">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[1].startXI[1].player.name}
+                </span>
               </div>
               <br />
               <br />
               <div className="col-12">
-                <span className="player-name px-1 py-1 fs-6">Mbappe</span>
+                <span className="player-name px-1 py-1 fs-6">
+                  {data.lineups[1].startXI[0].player.name}
+                </span>
               </div>
             </div>
           </div>
