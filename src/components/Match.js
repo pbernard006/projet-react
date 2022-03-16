@@ -8,26 +8,26 @@ function Match() {
   const { id } = useParams();
   const apiURL = "https://api-football-v1.p.rapidapi.com/v3/fixtures?id=" + id;
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  // const getData = async () => {
-  //     setLoading(true);
-  //     const response = await fetch(apiURL, {
-  //         method: 'GET',
-  //         headers: {
-  //             'x-rapidapi-host': `${process.env.REACT_APP_API_HOST}`,
-  //             'x-rapidapi-key': `${process.env.REACT_APP_API_KEY}`,
-  //         },
-  //     });
-  //     const dt = await response.json();
-  //     console.log(dt);
-  //     setData(dt.response[0]);
-  //     setLoading(false);
-  // };
+  const getData = async () => {
+    setLoading(true);
+    const response = await fetch(apiURL, {
+      method: "GET",
+      headers: {
+        "x-rapidapi-host": `${process.env.REACT_APP_API_HOST}`,
+        "x-rapidapi-key": `${process.env.REACT_APP_API_KEY}`,
+      },
+    });
+    const dt = await response.json();
+    console.log(dt);
+    setData(dt.response[0]);
+    setLoading(false);
+  };
 
-  // useEffect(() => {
-  //     getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <div>
@@ -54,7 +54,7 @@ function Match() {
         //     </div>
         // </div>
         <div>
-          <Score />
+          <Score data={data} />
           <div className="container">
             <Statistiques />
             <Lineup />
