@@ -22,6 +22,11 @@ function Home() {
     const apiURL = buildURL();
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [currentMatchweek, setCurrentMatchweek] = useState(true);
+
+    function toggle() {
+        setCurrentMatchweek(!currentMatchweek);
+    }
 
     // const getData = async () => {
     //     setLoading(true);
@@ -45,8 +50,8 @@ function Home() {
         <div className="container px-2">
             {loading ? (
                 <div className=" mt-5 d-flex justify-content-center ">
-                    <div class="spinner-border" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                    <div className="spinner-border" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
                 </div>
             ) : (
@@ -63,12 +68,12 @@ function Home() {
                             <div className="match-card">
                                 <div className="row">
                                     <div className="col-6 text-center">
-                                        <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                        <img className="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
                                         <br />
                                         <span className="mb-4 fs-3 text-light">Lorient</span>
                                     </div>
                                     <div className="col-6 text-center">
-                                        <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                        <img className="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
                                         <br />
                                         <span className="mb-4 fs-3 text-light">Lyon</span>
                                     </div>
@@ -80,12 +85,12 @@ function Home() {
                         <div className="match-card">
                             <div className="row">
                                 <div className="col-6 text-center">
-                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                    <img className="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
                                     <br />
                                     <span className="mb-4 fs-3 text-light">Lorient</span>
                                 </div>
                                 <div className="col-6 text-center">
-                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                    <img className="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
                                     <br />
                                     <span className="mb-4 fs-3 text-light">Lyon</span>
                                 </div>
@@ -96,12 +101,12 @@ function Home() {
                         <div className="match-card">
                             <div className="row">
                                 <div className="col-6 text-center">
-                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                    <img className="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
                                     <br />
                                     <span className="mb-4 fs-3 text-light">Lorient</span>
                                 </div>
                                 <div className="col-6 text-center">
-                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                    <img className="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
                                     <br />
                                     <span className="mb-4 fs-3 text-light">Lyon</span>
                                 </div>
@@ -112,12 +117,12 @@ function Home() {
                         <div className="match-card">
                             <div className="row">
                                 <div className="col-6 text-center">
-                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
+                                    <img className="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
                                     <br />
                                     <span className="mb-4 fs-3 text-light">Lorient</span>
                                 </div>
                                 <div className="col-6 text-center">
-                                    <img class="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
+                                    <img className="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
                                     <br />
                                     <span className="mb-4 fs-3 text-light">Lyon</span>
                                 </div>
