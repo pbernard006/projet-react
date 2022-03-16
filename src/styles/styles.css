@@ -1,59 +1,83 @@
 .title {
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-    font-size: 40px;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-size: 40px;
 }
 .white {
-    color: #e2e2e2;
+  color: #e2e2e2;
 }
 
 .bg-green {
-    background-color: green;
+  background-color: green;
 }
 
+.btn-secondary,
 .btn-secondary {
-    background-color: #413d3d;
-    color: #e2e2e2;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-    border-radius: 10px;
+  background-color: #413d3d;
+  color: #e2e2e2;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  border-radius: 10px;
+}
+
+.btn-secondary-not-selected {
+  background-color: #e2e2e2;
+  color: #413d3d;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  border-radius: 10px;
 }
 
 .mt-8 {
-    margin-top: 0.8rem !important;
+  margin-top: 0.8rem !important;
 }
 
 .match-card {
-    background-image: url(../images/pitch.jpg);
-    background-size: cover;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-    border: solid #413d3d 0.1px;
+  background-image: url(../images/pitch.jpg);
+  background-size: cover;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  border: solid #413d3d 0.1px;
 }
 
 .match-card:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .bg-match {
-    background-image: url(../images/pitch.jpg);
-    background-size: cover;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-    background-position: 50% 80%;
+  background-image: url(../images/pitch.jpg);
+  background-size: cover;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  background-position: 50% 80%;
 }
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .score {
-    background-color: #979797;
-    border-radius: 10px;
-    margin-left: 40%;
-    margin-right: 40%;
+  background-color: #979797;
+  border-radius: 10px;
+  margin-left: 40%;
+  margin-right: 40%;
 }
 
 .statistiques {
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
 }
 
-.line-up {
-    background-image: url(../images/line-up.jpg);
+.lineup {
+  background-image: url(../images/line-up.png);
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.player-name {
+  background: #979797;
+  border-radius: 10px;
+  color: #f5f9f7;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+}
+
+.lineup-informations {
+  font-family: "ZCOOL QingKe HuangYou", cursive;
 }
