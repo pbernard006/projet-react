@@ -39,7 +39,7 @@ function Match() {
         </div>
       ) : (
         <div>
-          <Score data={data} />
+          <Score data={data} id={id} />
           <div className="container">
             <Statistiques data={data} />
             <Lineup data={data} />
