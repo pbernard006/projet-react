@@ -2,13 +2,25 @@ import { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Score({ data }) {
-  const [heart, fillHeart] = useState(false);
+  const [favorite, setFavorite] = useState(false);
+
+  function clickOnSetFavorite() {
+    setFavorite(!favorite);
+  }
 
   console.log({ data });
   return (
     <div className="container-fluid bg-match pt-5rem">
       <div className="row">
-        <div className="col-6 mt-4  mb-4 text-center">
+        <div className="col-12">
+          <div className="text-end">
+            <i
+              className={`${favorite ? "fas" : "far"} fa-heart fs-2 mt-2 red`}
+              onClick={clickOnSetFavorite}
+            ></i>
+          </div>
+        </div>
+        <div className="col-6 mt-1 mb-4 text-center">
           {data?.teams.home.name === "Paris Saint Germain" && (
             <span className="text-light fs-2">PSG</span>
           )}
@@ -31,7 +43,7 @@ function Score({ data }) {
             )}
           </div>
         </div>
-        <div className="col-6 mt-4 mb-4 text-center">
+        <div className="col-6 mt-1 mb-4 text-center">
           {data?.teams.away.name === "Paris Saint Germain" && (
             <span className="text-light fs-2">PSG</span>
           )}
