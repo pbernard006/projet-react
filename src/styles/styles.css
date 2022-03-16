@@ -1,5 +1,5 @@
 .title {
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
   font-size: 40px;
 }
 .white {
@@ -14,14 +14,14 @@
 .btn-secondary {
   background-color: #413d3d;
   color: #e2e2e2;
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
   border-radius: 10px;
 }
 
 .btn-secondary-not-selected {
   background-color: #e2e2e2;
   color: #413d3d;
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
   border-radius: 10px;
 }
 
@@ -32,7 +32,7 @@
 .match-card {
   background-image: url(../images/pitch.jpg);
   background-size: cover;
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
   border: solid #413d3d 0.1px;
 }
 
@@ -43,7 +43,7 @@
 .bg-match {
   background-image: url(../images/pitch.jpg);
   background-size: cover;
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
   background-position: 50% 80%;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .statistiques {
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
 .lineup {
@@ -75,11 +75,11 @@
   background: #979797;
   border-radius: 10px;
   color: #f5f9f7;
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
 .lineup-informations {
-  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
 .header {
@@ -95,4 +95,9 @@
 
 .red {
   color: #9f3838;
+}
+
+.favorites {
+  color: var(--bs-body-color);
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
