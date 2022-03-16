@@ -5,7 +5,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Score({ data, id }) {
   const [favorite, setFavorite] = useState(false);
-  console.log(data.fixture.id);
 
   const dispatch = useDispatch();
   const addToFavorite = (event) => {
