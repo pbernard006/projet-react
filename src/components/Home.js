@@ -3,32 +3,34 @@ import { Link } from "react-router-dom";
 import calendar from "../data/calendar.json";
 import "../styles/styles.css";
 
-// function buildURL() {
-//   var apiURL =
-//     "https://api-football-v1.p.rapidapi.com/v3/fixtures?league=61&next=10&round=Regular%20Season%20-%20";
-//   const today = new Date();
-//   var matchweek = 0;
-//   // On démarre la boucle à 1 car on souhaite accéder à i - 1
-//   for (var i = 1; i < calendar.matchweek.length; i++) {
-//     if (
-//       Date.parse(today) >= Date.parse(calendar.matchweek[i - 1].end_date) &&
-//       Date.parse(today) <= Date.parse(calendar.matchweek[i].end_date)
-//     ) {
-//       matchweek = calendar.matchweek[i].matchweek;
-//       apiURL += matchweek;
-//       console.log(apiURL);
-//     }
-//   }
-//   return apiURL;
-// }
+function getIndexOfMatchweek() {
+  const today = new Date();
+  var index = 0;
+  // On démarre la boucle à 1 car on souhaite accéder à i - 1
+  for (var i = 1; i < calendar.matchweek.length; i++) {
+    if (
+      Date.parse(today) >= Date.parse(calendar.matchweek[i - 1].end_date) &&
+      Date.parse(today) <= Date.parse(calendar.matchweek[i].end_date)
+    ) {
+      index = i;
+    }
+  }
+  return index;
+}
 
 function Home() {
+  const index = getIndexOfMatchweek();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentMatchweek, setCurrentMatchweek] = useState(true);
   const [lastMatchweek, setLastMatchweek] = useState(false);
+
   const [apiURL, setApiURL] = useState(
-    "https://api-football-v1.p.rapidapi.com/v3/fixtures?league=61&next=10"
+    "https://api-football-v1.p.rapidapi.com/v3/fixtures?league=61&from=" +
+      calendar.matchweek[index].start_date +
+      "&to=" +
+      calendar.matchweek[index].end_date +
+      "&season=2021"
   );
 
   const getData = async () => {
@@ -53,7 +55,11 @@ function Home() {
     setCurrentMatchweek(true);
     setLastMatchweek(false);
     setApiURL(
-      "https://api-football-v1.p.rapidapi.com/v3/fixtures?league=61&next=10"
+      "https://api-football-v1.p.rapidapi.com/v3/fixtures?league=61&from=" +
+        calendar.matchweek[index].start_date +
+        "&to=" +
+        calendar.matchweek[index].end_date +
+        "&season=2021"
     );
   }
 
@@ -61,7 +67,11 @@ function Home() {
     setCurrentMatchweek(false);
     setLastMatchweek(true);
     setApiURL(
-      "https://api-football-v1.p.rapidapi.com/v3/fixtures?league=61&last=10"
+      "https://api-football-v1.p.rapidapi.com/v3/fixtures?league=61&from=" +
+        calendar.matchweek[index - 1].start_date +
+        "&to=" +
+        calendar.matchweek[index - 1].end_date +
+        "&season=2021"
     );
   }
 
