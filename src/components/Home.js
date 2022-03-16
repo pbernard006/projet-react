@@ -21,30 +21,30 @@ function buildURL() {
 function Home() {
     const apiURL = buildURL();
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [currentMatchweek, setCurrentMatchweek] = useState(true);
 
     function toggle() {
         setCurrentMatchweek(!currentMatchweek);
     }
 
-    // const getData = async () => {
-    //     setLoading(true);
-    //     const response = await fetch(apiURL, {
-    //         method: 'GET',
-    //         headers: {
-    //             'x-rapidapi-host': '',
-    //             'x-rapidapi-key': '',
-    //         },
-    //     });
-    //     const dt = await response.json();
-    //     console.log(dt);
-    //     setData(dt);
-    //     setLoading(false);
-    // };
-    // useEffect(() => {
-    //     getData();
-    // }, []);
+    const getData = async () => {
+        setLoading(true);
+        const response = await fetch(apiURL, {
+            method: 'GET',
+            headers: {
+                'x-rapidapi-host': `${process.env.REACT_APP_API_HOST}`,
+                'x-rapidapi-key': `${process.env.REACT_APP_API_KEY}`,
+            },
+        });
+        const dt = await response.json();
+        console.log(dt);
+        setData(dt);
+        setLoading(false);
+    };
+    useEffect(() => {
+        getData();
+    }, []);
 
     return (
         <div className="container px-2">
@@ -56,26 +56,47 @@ function Home() {
                 </div>
             ) : (
                 <div className="row px-2 py-2">
-                    {/* {data?.response.map((match) => (
-                        <div className="col-6 col-md-4 match-card" key={match.fixture.id}>
-                            <p>{match.teams.home.name}</p>
-                            <p>vs</p>
-                            <p>{match.teams.away.name}</p>
+                    {data?.response.map((match) => (
+                        <div key={match.fixture.id} className="col-12 col-md-6 col-lg-4 px-2 py-2">
+                            <Link className="link" to={`/match/${match.fixture.id}`}>
+                                <div className="match-card">
+                                    <div className="row">
+                                        <div className="col-6 text-center">
+                                            <img className="w-75 mt-4" src={match.teams.home.logo}></img>
+                                            <br />
+                                            {match.teams.home.name === 'Paris Saint Germain' && <span className="mb-4 fs-3 text-light">PSG</span>}
+                                            {match.teams.home.name === 'Stade Brestois 29' && <span className="mb-4 fs-3 text-light">Stade Brestois</span>}
+                                            {match.teams.home.name !== 'Stade Brestois 29' && match.teams.home.name != 'Paris Saint Germain' && (
+                                                <span className="mb-4 fs-3 text-light">{match.teams.home.name}</span>
+                                            )}
+                                        </div>
+                                        <div className="col-6 text-center">
+                                            <img className="w-75 mt-4" src={match.teams.away.logo}></img>
+                                            <br />
+                                            {match.teams.away.name === 'Paris Saint Germain' && <span className="mb-4 fs-3 text-light">PSG</span>}
+                                            {match.teams.away.name === 'Stade Brestois 29' && <span className="mb-4 fs-3 text-light">Stade Brestois</span>}
+                                            {match.teams.away.name !== 'Stade Brestois 29' && match.teams.away.name != 'Paris Saint Germain' && (
+                                                <span className="mb-4 fs-3 text-light">{match.teams.away.name}</span>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
                         </div>
-                    ))} */}
-                    <div className="col-6 col-md-4 px-2 py-2">
+                    ))}
+                    {/* <div className="col-12 col-md-6 col-lg-4 px-2 py-2">
                         <Link className="link" to={`/match/718614`}>
                             <div className="match-card">
                                 <div className="row">
                                     <div className="col-6 text-center">
                                         <img className="w-75 mt-4" src="https://media.api-sports.io/football/teams/97.png"></img>
                                         <br />
-                                        <span className="mb-4 fs-3 text-light">Lorient</span>
+                                        <span className="mb-4 fs-3 text-light">PSG</span>
                                     </div>
                                     <div className="col-6 text-center">
                                         <img className="w-75 mt-4" src="https://media.api-sports.io/football/teams/80.png"></img>
                                         <br />
-                                        <span className="mb-4 fs-3 text-light">Lyon</span>
+                                        <span className="mb-4 fs-3 text-light">ESTAC Troyes</span>
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +149,7 @@ function Home() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             )}
         </div>
