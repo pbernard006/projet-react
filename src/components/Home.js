@@ -21,30 +21,30 @@ function buildURL() {
 function Home() {
     const apiURL = buildURL();
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [currentMatchweek, setCurrentMatchweek] = useState(true);
 
     function toggle() {
         setCurrentMatchweek(!currentMatchweek);
     }
 
-    const getData = async () => {
-        setLoading(true);
-        const response = await fetch(apiURL, {
-            method: 'GET',
-            headers: {
-                'x-rapidapi-host': `${process.env.REACT_APP_API_HOST}`,
-                'x-rapidapi-key': `${process.env.REACT_APP_API_KEY}`,
-            },
-        });
-        const dt = await response.json();
-        console.log(dt);
-        setData(dt);
-        setLoading(false);
-    };
-    useEffect(() => {
-        getData();
-    }, []);
+    // const getData = async () => {
+    //     setLoading(true);
+    //     const response = await fetch(apiURL, {
+    //         method: 'GET',
+    //         headers: {
+    //             'x-rapidapi-host': `${process.env.REACT_APP_API_HOST}`,
+    //             'x-rapidapi-key': `${process.env.REACT_APP_API_KEY}`,
+    //         },
+    //     });
+    //     const dt = await response.json();
+    //     console.log(dt);
+    //     setData(dt);
+    //     setLoading(false);
+    // };
+    // useEffect(() => {
+    //     getData();
+    // }, []);
 
     return (
         <div className="container px-2">
@@ -56,7 +56,7 @@ function Home() {
                 </div>
             ) : (
                 <div className="row px-2 py-2">
-                    {data?.response.map((match) => (
+                    {/* {data?.response.map((match) => (
                         <div key={match.fixture.id} className="col-12 col-md-6 col-lg-4 px-2 py-2">
                             <Link className="link" to={`/match/${match.fixture.id}`}>
                                 <div className="match-card">
@@ -83,8 +83,8 @@ function Home() {
                                 </div>
                             </Link>
                         </div>
-                    ))}
-                    {/* <div className="col-12 col-md-6 col-lg-4 px-2 py-2">
+                    ))} */}
+                    <div className="col-12 col-md-6 col-lg-4 px-2 py-2">
                         <Link className="link" to={`/match/718614`}>
                             <div className="match-card">
                                 <div className="row">
@@ -102,7 +102,7 @@ function Home() {
                             </div>
                         </Link>
                     </div>
-                    <div className="col-6 col-md-4 px-2 py-2">
+                    <div className="col-12 col-md-6 col-lg-4 px-2 py-2">
                         <div className="match-card">
                             <div className="row">
                                 <div className="col-6 text-center">
@@ -118,7 +118,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-6 col-md-4 px-2 py-2">
+                    <div className="col-12 col-md-6 col-lg-4 px-2 py-2">
                         <div className="match-card">
                             <div className="row">
                                 <div className="col-6 text-center">
@@ -134,7 +134,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-6 col-md-4 px-2 py-2">
+                    <div className="col-12 col-md-6 col-lg-4 px-2 py-2">
                         <div className="match-card">
                             <div className="row">
                                 <div className="col-6 text-center">
@@ -149,7 +149,7 @@ function Home() {
                                 </div>
                             </div>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
             )}
         </div>
