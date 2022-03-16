@@ -1,7 +1,7 @@
 function Score({ data }) {
   console.log({ data });
   return (
-    <div className="container-fluid bg-match">
+    <div className="container-fluid bg-match pt-5rem">
       <div className="row">
         <div className="col-6 mt-4  mb-4 text-center">
           {data?.teams.home.name === "Paris Saint Germain" && (
