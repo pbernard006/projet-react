@@ -81,3 +81,13 @@
 .lineup-informations {
   font-family: "ZCOOL QingKe HuangYou", cursive;
 }
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.pt-5rem {
+  padding-top: 5rem !important;
+}

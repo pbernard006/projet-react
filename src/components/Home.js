@@ -77,7 +77,7 @@ function Home() {
   }
 
   return (
-    <div className="container px-2">
+    <div className="container px-2 pt-5rem">
       <div className="row text-center mt-3">
         <div className="radio col" onClick={clickOnLast}>
           <span
